@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    box-sizing: border-box;
+    color: hsl(0, 0%, 100%);
+}
+.main_container{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(216, 12%, 8%);
+    position: relative;
+}
+.container{
+    width: 350px;
+    height: 320px;
+    background-color: hsl(213, 26%, 15%);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.main_box{
+    padding: 20px;
+}
+
+.img_span{
+    width: 40px;
+    height: 40px;
+    border-radius:50% ;
+    background-color: hsla(216, 10%, 38%, 0.268);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.img_span img{
+   width: 15px; 
+}
+.quest, .points{
+    margin-top: 20px;
+}
+.text{
+    margin-top: 10px;
+    opacity: 0.5;
+    font-size: 14px;
+}
+.points{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.circles{
+    width: 40px;
+    height: 40px;
+    border-radius:50% ;
+    background-color: hsla(216, 10%, 38%, 0.268);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+.circles div{
+    opacity: .5;
+}
+.circles:hover, .circles:active, .one.selected,.two.selected,.three.selected, .four.selected, .five.selected{
+    background-color: hsl(25, 97%, 53%);
+}
+#submit{
+    background-color: hsl(25, 97%, 53%);
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .4s ease;
+    cursor: pointer;
+}
+.one.active{
+    background-color: rgba(255, 255, 255, 0.145);
+    transition-delay: .1s;
+}
+.two.active{
+    background-color: rgba(255, 255, 255, 0.261);
+    transition-delay: .2s;
+}
+.three.active{
+    background-color: rgba(255, 255, 255, 0.419);
+    transition-delay: .3s;
+}
+.four.active{
+    background-color: rgba(255, 255, 255, 0.542);
+    transition-delay: .4s;
+}
+#submit:hover{
+    color: hsl(25, 97%, 53%);
+    background-color: #fff;
+}
+.submit_container{
+    width: 370px;
+    height: 330px;
+    background-color: hsl(213, 26%, 15%);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    transition: .4s ease;
+    transform: scale(0);
+    
+}
+.submit_container.active{
+    transform: scale(1);
+}
+.box{
+    padding: 40px;
+}
+.submit_img img{
+    width: 150px;
+}
+.rating{
+    display: block;
+    width: 200px;
+    margin: 20px auto; 
+    padding: 5px 10px;
+    background-color: hsla(216, 10%, 38%, 0.268);
+    border-radius: 20px;
+    color: hsl(25, 97%, 53%);
+    opacity: .6;  
+}
+.message h1{
+    font-size: 23px;
+}
+.message p{
+    margin-top: 10px;
+    opacity: .6;
+    font-size: 13px;
+    color: hsl(216, 17%, 62%);
+}
+
+@media screen and (max-width:375px) {
+    .container{
+        width: 300px;
+    }
+    .text{
+        line-height: 20px;
+        font-size: 13px;
+    }
+    .submit_container{
+        width: 310px;
+                
+    }
+    .message p{
+        font-size: 11.3px;
+    }
+    .message h1{
+        font-size: 20px;
+    }
+}
